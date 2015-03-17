@@ -17,6 +17,16 @@ describe('GitUserSearchController', function() {
 
   describe('when searching for a user', function() {
 
+    var httpBackend;
+    beforeEach(inject(function($httpBackend) {
+      httpBackend = $httpBackend
+      httpBackend
+        .when("GET", "https://api.github.com/search/users?q=hello")
+        .respond({
+          items: items
+        });
+    }));
+
     var items = [
       {
         "login": "tansaku",
@@ -33,6 +43,8 @@ describe('GitUserSearchController', function() {
     it('should display search results', function() {
       scope.searchTerm = 'hello';
       scope.doSearch();
+      scope.$apply();
+      httpBackend.flush();
       expect(scope.searchResult.items).toEqual(items);
     });
 
