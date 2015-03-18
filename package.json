@@ -1,10 +1,10 @@
 {
   "name": "github-profile",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD # GitProfile-V1 ======= # GitProfile >>>>>>> 251e5ac19192ff71419e78a92ff0315ef29d2a7e",
+  "description": "GitProfile-V1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "Louise Beh",
