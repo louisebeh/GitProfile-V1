@@ -11,8 +11,8 @@ app.get('/', function(request, response) {
   response.render('index')
 });
 
-server.listen(8080, function(){
-  console.log("server listening on port 8080");
+server.listen(port, function(){
+  console.log("server listening on port");
 });
 
 module.exports = server;
