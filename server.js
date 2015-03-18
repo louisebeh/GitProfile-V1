@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
 });
 
 server.listen(port, function(){
-  console.log("server listening on port");
+  console.log("server listening on port " + port);
 });
 
 module.exports = server;
