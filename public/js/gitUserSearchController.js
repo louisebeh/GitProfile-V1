@@ -4,7 +4,7 @@ githubUserSearch.controller('GitUserSearchController', function($scope, $resourc
 
   $scope.doSearch = function() {
     $scope.searchResult = searchResource.get({
-      q: $scope.searchTerm,
+      q: $scope.searchTerm
     });
 
   };
