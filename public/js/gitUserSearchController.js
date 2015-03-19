@@ -9,7 +9,7 @@ githubUserSearch.controller('GitUserSearchController', function($scope, $resourc
       var username = 'https://api.github.com/users/' + $scope.searchTerm;
       $http.get(username).
         success(function(data){
-          $scope.username = data
+          $scope.username = data;
 
         });
       });

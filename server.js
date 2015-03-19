@@ -2,13 +2,13 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-  response.render('index')
+  response.render('index');
 });
 
 server.listen(port, function(){
